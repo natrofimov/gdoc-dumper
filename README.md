@@ -67,4 +67,4 @@ print(Formats.ZIP.value) # zip
 ```
 
 # ⭐ License
-[MIT License]()
+[MIT License](https://github.com/natrofimov/gdoc-dumper/blob/DEV/LICENSE)
