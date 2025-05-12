@@ -1,5 +1,5 @@
 import re
-from typing import AsyncGenerator, Generator
+from typing import AsyncIterable, Iterable
 
 import httpx
 
@@ -56,7 +56,7 @@ class Downloader:
         file_format: Formats = Formats.PDF,
         chunk_size: int = 8192,
         timeout: float = 15,
-    ) -> AsyncGenerator[bytes, None]:
+    ) -> AsyncIterable[bytes]:
         """
         Asynchronously downloads a Google Docs document in the specified format
         and returns the content as a stream of bytes.
@@ -142,7 +142,7 @@ class Downloader:
         file_format: Formats = Formats.PDF,
         chunk_size: int = 8192,
         timeout: float = 15,
-    ) -> Generator[bytes, None]:
+    ) -> Iterable[bytes]:
         """
         Synchronously downloads a Google Docs document in the specified format
         and returns the content as a stream of bytes.

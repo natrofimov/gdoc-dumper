@@ -1,15 +1,16 @@
 [project]
 name = "gdoc-dumper"
-version = "0.1.1"
+version = "0.2.2"
 description = "Lightweight python package for downloading Google Docs documents in various formats."
 readme = "README.md"
 authors = [
     { name = "natrofimov", email = "nikolaytroofimov@gmail.com" }
 ]
-requires-python = ">=3.13"
+requires-python = ">=3.10"
 dependencies = [
     "aiofiles>=24.1.0",
     "httpx>=0.28.1",
+    "twine>=6.1.0",
 ]
 
 [build-system]

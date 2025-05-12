@@ -1,5 +1,5 @@
 from pathlib import Path
-from typing import AsyncGenerator, Generator, Union
+from typing import Union, Iterable, AsyncIterable
 
 import aiofiles
 
@@ -21,7 +21,7 @@ class FileManager:
 
     @staticmethod
     async def asave_stream(
-        stream: AsyncGenerator[bytes, None],
+        stream: AsyncIterable[bytes],
         path: Union[str, Path],
     ) -> Path:
         path = Path(path)
@@ -46,7 +46,7 @@ class FileManager:
 
     @staticmethod
     def save_stream(
-        stream: Generator[bytes, None],
+        stream: Iterable[bytes],
         path: Union[str, Path],
     ) -> Path:
         path = Path(path)
